@@ -8,6 +8,13 @@
     # Yet Another Dotfile Repo v1.1
     # Now with Prezto and Vundle!
 
+    Note: If installing on Ubuntu, install these packages first:
+    sudo apt-get install git
+    sudo apt-get install git-flow
+    sudo apt-get install rake
+    sudo apt-get install zsh
+    sudo apt-get install exuberant-ctags
+    
     sh -c "`curl -fsSL https://raw.github.com/Jojo-Jojovich/dotfiles/master/install.sh`"
 
 **Always be sure to run `rake update` after pulling to ensure plugins are updated**
