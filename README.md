@@ -14,6 +14,7 @@
     sudo apt-get install rake
     sudo apt-get install zsh
     sudo apt-get install exuberant-ctags
+    sudo apt-get install nfs-common (if you're creating a new base box)
     
     sh -c "`curl -fsSL https://raw.github.com/Jojo-Jojovich/dotfiles/master/install.sh`"
 
