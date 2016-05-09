@@ -77,10 +77,10 @@ function prompt_skwp_setup {
 
   PROMPT="${__PROMPT_SKWP_COLORS[3]}%n%f@${__PROMPT_SKWP_COLORS[2]}%m%f ${__PROMPT_SKWP_COLORS[5]}%~%f "'$git_info[prompt]'"$ "
   RPROMPT='%F{blue}'
-  if [[ -n ${ruby_info[version]} ]]
+  if [[ -n ${ruby_info[version]} ]]; then
     RPROMPT='${RPROMPT}${ruby_info[version]}'
   fi
-  if [[ -n ${node_info[version]} ]]
+  if [[ -n ${node_info[version]} ]]; then
     RPROMPT='${RPROMPT}${node_info[version]}'
   fi
 }
