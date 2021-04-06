@@ -25,11 +25,23 @@ function prompt_skwp_precmd {
   # Get ruby information
   if (( $+functions[ruby-info] )); then
     ruby-info
+  else
+    unset ruby_info
   fi
 
   # Get node information
   if (( $+functions[node-info] )); then
     node-info
+  fi
+
+  # Get python information
+  if (( $+functions[python-info] )); then
+    python-info
+  fi
+
+  # Get go information
+  if (( $+functions[go-info] )); then
+    go-info
   fi
 }
 
@@ -75,8 +87,14 @@ function prompt_skwp_setup {
   # node info (nvm, node)
   zstyle ':prezto:module:node:info:version' format '[%v]'
 
+  # python info (pyenv)
+  zstyle ':prezto:module:python:info:version' format '[%v]'
+
+  # go info (goenv)
+  zstyle ':prezto:module:go:info:version' format '[%v]'
+
   PROMPT="${__PROMPT_SKWP_COLORS[1]}[%D{%F} %D{%H:%M:%S}] ${__PROMPT_SKWP_COLORS[3]}%n%f@${__PROMPT_SKWP_COLORS[2]}%m%f ${__PROMPT_SKWP_COLORS[5]}%~%f "'$git_info[prompt]'"$ "
-  RPROMPT='${__PROMPT_SKWP_COLORS[1]}${ruby_info[version]}${node_info[version]}'
+  RPROMPT='${__PROMPT_SKWP_COLORS[1]}${ruby_info[version]}${node_info[version]}${python_info[version]}${go_info[version]}'
 }
 
 prompt_skwp_setup "$@"
