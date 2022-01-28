@@ -104,7 +104,7 @@ task :install_vundle do
   unless File.exists?(vundle_path)
     run %{
       cd $HOME/.yadr
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
+      git clone git@github.com:VundleVim/Vundle.vim.git #{vundle_path}
     }
   end
 
